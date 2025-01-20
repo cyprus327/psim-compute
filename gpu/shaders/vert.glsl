@@ -16,7 +16,7 @@ void main() {
 
     fragColor = vec4(abs(normalize(vel)) + 0.2, 1.0);
 
-    const float scale = 0.1;
+    const float scale = 0.08;
     vec3 vertexView = vertexPosition*scale;
 
     // compute the angle of the velocity in view space
@@ -34,7 +34,7 @@ void main() {
 
     // scale the tip
     const float isTip = float(2 == gl_VertexID);
-    const float arrowLength = speed * 10.0;
+    const float arrowLength = speed * 8.0;
     vertexView.xy = vertexView.xy * (1.0 - isTip) + isTip * vertexView.xy * (arrowLength + 1.0);
 
     // add particle position to the vertex in view space

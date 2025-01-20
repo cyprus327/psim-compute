@@ -11,18 +11,18 @@ int main(void) {
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
     InitWindow(1024, 768, "GPU Particles");
 
-    char* compCode = LoadFileText("shaders/comp.glsl");
+    char* compCode = LoadFileText("gpu/shaders/comp.glsl");
     const int compData = rlCompileShader(compCode, RL_COMPUTE_SHADER);
     const int compShader = rlLoadComputeShaderProgram(compData);
     UnloadFileText(compCode);
 
-    Shader particleShader = LoadShader("shaders/vert.glsl", "shaders/frag.glsl");
+    Shader particleShader = LoadShader("gpu/shaders/vert.glsl", "gpu/shaders/frag.glsl");
 
-    #define P_COUNT 10000000
+    #define P_COUNT 8388608 // 2 << 22
     Vector4* positions = MemAlloc(sizeof(Vector4) * P_COUNT);
     Vector4* velocities = MemAlloc(sizeof(Vector4) * P_COUNT);
     
-    #define P_POS_MAX 500
+    #define P_POS_MAX 100
     for (int i = 0; i < P_COUNT; i += 1) {
         positions[i].x = GetRandomValue(0, P_POS_MAX);
         positions[i].y = GetRandomValue(0, P_POS_MAX);
