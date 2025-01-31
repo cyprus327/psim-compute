@@ -19,7 +19,7 @@ NOTE: The is in C instead of Odin because I had to recompile raylib's source to 
   - If not installed already [this](https://github.com/raysan5/raylib?tab=readme-ov-file#installing-and-building-raylib-on-multiple-platforms) tutorial details how to install raylib on any platform
 - Compile and run following the tutorial mentioned above
 
-## GPU Screenshots with 2^23 particles
+## GPU Screenshots with 2^23 (~8,000,000) particles
 the screenshots don't do it justice, it looks much better moving but I can't screen record on this laptop
 
 ![gpsim4](https://github.com/user-attachments/assets/9b8437eb-4f43-4509-bd1f-0f6374069b7d)
@@ -28,7 +28,9 @@ the screenshots don't do it justice, it looks much better moving but I can't scr
 ![gpsim7](https://github.com/user-attachments/assets/ed47ae73-1756-44bf-b594-c7a8e1a4ca63)
 ![gpsim5](https://github.com/user-attachments/assets/eddee575-dbda-4b8e-8037-15c871fd88bf)
 
-## CPU Screenshots with 200,000 particles (oddly cropped, ~50 FPS on my laptop):
+## CPU Screenshots with 200,000 particles
+~50 FPS on my old laptop
+
 ![psim1](https://github.com/user-attachments/assets/52be0d02-2882-4f1c-94fd-c0b9743acba4)
 ![psim7](https://github.com/user-attachments/assets/0c454b6f-f71c-459a-ba4e-c84846502d2b)
 ![psim2](https://github.com/user-attachments/assets/2c90925c-9a64-49fa-90ab-944ea962f1ea)
